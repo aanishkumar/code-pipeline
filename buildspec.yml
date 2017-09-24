@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+      - gradle clean test
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - gradle clean build
+artifacts:
+  files:
+    - build/libs/helloworld-0.1.0.jar
